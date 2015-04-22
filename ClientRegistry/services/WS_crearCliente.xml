@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceDescription catalog="WSDL" id="WS_crearCliente" adapter="soap" useNsPrefix="input">
+    <Name>crearCliente</Name>
+    <Description></Description>
+    <Schemas>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://RFPRCSS/WS.tws" xmlns:impl1="http://BAPPT" xmlns:intf="http://RFPRCSS/WS.tws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://RFPRCSS/WS.tws">
+  
+  <xsd:element name="crearCliente">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="cliente" type="impl1:Cliente"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="crearClienteResponse">
+    <xsd:complexType/>
+  </xsd:element>
+</xs:schema>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://RFPRCSS/WS.tws" xmlns:impl1="http://BAPPT" xmlns:intf="http://RFPRCSS/WS.tws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://BAPPT">
+  
+  <xsd:complexType name="Cliente">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" minOccurs="0" name="nombre" nillable="false" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="apellido" nillable="false" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="cedula" nillable="false" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="direccion" nillable="false" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="fechaNacimiento" nillable="false" type="xsd:dateTime"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="password" nillable="false" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xs:schema>
+    </Schemas>
+    <Procedure>
+        <Input>
+            <Parameter xmlns:ns2="http://RFPRCSS/WS.tws" elementName="ns2:crearCliente" elementType="ns2:crearCliente"/>
+        </Input>
+        <Output>
+            <Parameter xmlns:ns2="http://RFPRCSS/WS.tws" elementName="ns2:crearClienteResponse" elementType="ns2:crearClienteResponse"/>
+        </Output>
+    </Procedure>
+    <ProviderAttributes>
+        <item>
+            <name>endpointUrl</name>
+            <value>https://WIN-3JVF8RJARSL:9443/teamworks/webservices/RFPRCSS/WS.tws</value>
+        </item>
+        <item>
+            <name>bindingDescription</name>
+            <value></value>
+        </item>
+        <item>
+            <name>nsUri</name>
+            <value>http://RFPRCSS/WS.tws</value>
+        </item>
+        <item>
+            <name>soapAction</name>
+            <value>http://RFPRCSS/WS.tws/crearCliente</value>
+        </item>
+        <item>
+            <name>soapVersion</name>
+            <value>SOAP v1.1</value>
+        </item>
+        <item>
+            <name>bindingName</name>
+            <value>WSSoapSoapBinding</value>
+        </item>
+        <item>
+            <name>portName</name>
+            <value>WSSoap</value>
+        </item>
+        <item>
+            <name>inputNS</name>
+            <value>xmlns:apachesoap=&quot;http://xml.apache.org/xml-soap&quot; xmlns:impl=&quot;http://RFPRCSS/WS.tws&quot; xmlns:impl1=&quot;http://BAPPT&quot; xmlns:intf=&quot;http://RFPRCSS/WS.tws&quot; </value>
+        </item>
+        <item>
+            <name>serviceName</name>
+            <value>WS</value>
+        </item>
+    </ProviderAttributes>
+    <SystemParameters/>
+</ServiceDescription>

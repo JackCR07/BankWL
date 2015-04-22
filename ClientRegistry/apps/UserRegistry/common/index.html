@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IntegrationTest</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/style.css">
+<script>
+	window.$ = window.jQuery = WLJQ;
+</script>
+</head>
+<body style="display: none;">
+
+
+	<!--application UI goes here-->
+	<div id="main">
+		<div class="container">
+
+			<section>
+				<div id="AuthBody" style='display: none'>
+					<div id="loginForm">
+						<ul class="input-list style-1 clearfix">
+							<li>Username: <input type="text" id="usernameInputField" /><br /></li>
+							<li>Password:<input type="text" id="passwordInputField" /><br />
+							</li>
+							<li><br> <input type="button" value="Login"
+								id="loginButton" class="myButton"></li>
+						</ul>
+					</div>
+				</div>
+				<div id="AppBody">
+				<form>
+					<h2>Formulario Registro</h2>
+					<ul class="input-list style-1 clearfix">
+						<li><label>Nombre:</label> <input id="nombre" type="text"
+							placeholder="Nombre" required></li>
+						<li><label>Apellido:</label> <input id="apellido"
+							type="text" placeholder="Apellido"></li>
+						<li><label>Contraseña:</label> <input id="clave"
+							type="password"></li>
+						<li><label>Identifación:</label> <input id="cedula" type="text"
+							placeholder="Identificación" required></li>
+						<li><label>Direccion:</label> <input id="direccion"
+							type="text" placeholder="Direccion"></li>
+						<li><label>Fecha Nacimiento:</label> <input
+							id="fechaNacimiento" type="date" required></li>
+						<li><br> <input type="button" value="Nuevo CLiente"
+							id="nuevoCliente" class="myButton">
+						</li>
+					</ul>
+					<br>
+					</form>
+				</div>
+				<div id="ResponseDiv"></div>
+			</section>
+
+		</div>
+	</div>
+
+
+	<script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/messages.js"></script>
+	<script src="js/cliente.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/AuthRealmChallengeHandler.js"></script>
+</body>
+</html>

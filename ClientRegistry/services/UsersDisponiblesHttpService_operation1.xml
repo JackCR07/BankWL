@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceDescription catalog="WSDL" id="UsersDisponiblesHttpService_operation1" adapter="soap" useNsPrefix="input">
+    <Name>operation1</Name>
+    <Description></Description>
+    <Schemas>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://UsersDisponibles" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://UsersDisponibles">
+      
+    <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="operation1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="cedulaCliente" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="operation1Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultado" nillable="true" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+    </Schemas>
+    <Procedure>
+        <Input>
+            <Parameter xmlns:ns2="http://UsersDisponibles" elementName="ns2:operation1" elementType="ns2:operation1"/>
+        </Input>
+        <Output>
+            <Parameter xmlns:ns2="http://UsersDisponibles" elementName="ns2:operation1Response" elementType="ns2:operation1Response"/>
+        </Output>
+    </Procedure>
+    <ProviderAttributes>
+        <item>
+            <name>endpointUrl</name>
+            <value>http://172.16.11.225:7800/UsersDisponibles/UsersDisponibles</value>
+        </item>
+        <item>
+            <name>bindingDescription</name>
+            <value></value>
+        </item>
+        <item>
+            <name>nsUri</name>
+            <value>http://UsersDisponibles</value>
+        </item>
+        <item>
+            <name>soapAction</name>
+            <value></value>
+        </item>
+        <item>
+            <name>soapVersion</name>
+            <value>SOAP v1.1</value>
+        </item>
+        <item>
+            <name>bindingName</name>
+            <value>UsersDisponiblesHttpBinding</value>
+        </item>
+        <item>
+            <name>portName</name>
+            <value>UsersDisponiblesHttpPort</value>
+        </item>
+        <item>
+            <name>inputNS</name>
+            <value>xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:tns=&quot;http://UsersDisponibles&quot; </value>
+        </item>
+        <item>
+            <name>serviceName</name>
+            <value>UsersDisponiblesHttpService</value>
+        </item>
+    </ProviderAttributes>
+    <SystemParameters/>
+</ServiceDescription>

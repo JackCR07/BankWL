@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wl:adapter xmlns:wl="http://www.worklight.com/integration" xmlns:http="http://www.worklight.com/integration/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SoapAdapter2">
+    <displayName>SoapAdapter2</displayName>
+    <description></description>
+    <connectivity>
+        <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+            <protocol>http</protocol>
+            <domain>WIN-3JVF8RJARSL</domain>
+            <port>9080</port>
+        </connectionPolicy>
+        <loadConstraints maxConcurrentConnectionsPerNode="2"/>
+    </connectivity>
+
+    <procedure name="WS_crearCliente" securityTest="wl_unprotected"/>
+</wl:adapter>

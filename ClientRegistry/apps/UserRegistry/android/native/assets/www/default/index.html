@@ -1,0 +1,102 @@
+<!DOCTYPE HTML><html>
+    <head>
+        <meta charset="UTF-8">
+        <title>IntegrationTest</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+        <link href="worklight/worklight.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		 WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "UserRegistry",
+   "APP_ID": "UserRegistry",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "1.0",
+   "ENVIRONMENT": "android",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_NATIVE_VERSION": "2106752373",
+   "WORKLIGHT_PLATFORM_VERSION": "6.2.0.01.20141216-0427",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/UserRegistry\/android\/"
+};
+</script>
+		<script src="worklight/cordova.js"></script>
+		<script src="worklight/wljq.js"></script>
+		<script src="worklight/worklight.js"></script>
+		<script src="worklight/checksum.js"></script>
+		<script>
+	window.$ = window.jQuery = WLJQ;
+</script>
+    </head>
+    <body style="display: none;">
+	<!--application UI goes here-->
+        <div id="main">
+            <div class="container">
+                <section>
+                    <div id="AuthBody" style="display: none">
+                        <div id="loginForm">
+                            <ul class="input-list style-1 clearfix">
+                                <li>Username: <input id="usernameInputField" type="text">
+                                    <br>
+                                </li>
+                                <li>Password:<input id="passwordInputField" type="text">
+                                    <br>
+                                </li>
+                                <li>
+                                    <br> 
+                                    <input class="myButton" id="loginButton" type="button" value="Login">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="AppBody">
+                        <form>
+                            <h2>Formulario Registro</h2>
+                            <ul class="input-list style-1 clearfix">
+                                <li>
+                                    <label>Nombre:</label> <input id="nombre" placeholder="Nombre" required="" type="text">
+                                </li>
+                                <li>
+                                    <label>Apellido:</label> <input id="apellido" placeholder="Apellido" type="text">
+                                </li>
+                                <li>
+                                    <label>Contrase&ntilde;a:</label> <input id="clave" type="password">
+                                </li>
+                                <li>
+                                    <label>Identifaci&oacute;n:</label> <input id="cedula" placeholder="Identificaci&oacute;n" required="" type="text">
+                                </li>
+                                <li>
+                                    <label>Direccion:</label> <input id="direccion" placeholder="Direccion" type="text">
+                                </li>
+                                <li>
+                                    <label>Fecha Nacimiento:</label> <input id="fechaNacimiento" required="" type="date">
+                                </li>
+                                <li>
+                                    <br> 
+                                    <input class="myButton" id="nuevoCliente" type="button" value="Nuevo CLiente">
+                                </li>
+                            </ul>
+                            <br>
+                        </form>
+                    </div>
+                    <div id="ResponseDiv"></div>
+                </section>
+            </div>
+        </div>
+        <script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/messages.js"></script>
+	<script src="js/cliente.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/AuthRealmChallengeHandler.js"></script>
+    </body>
+</html>
