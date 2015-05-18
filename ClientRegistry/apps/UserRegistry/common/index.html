@@ -11,55 +11,55 @@
     		-->
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/fireStyle.css">
 <script>
 	window.$ = window.jQuery = WLJQ;
 </script>
 </head>
-<body style="display: none;">
+<body class="gray-background">
 
 
 	<!--application UI goes here-->
-	<div id="main">
+	<div class="gray-background" id="main">
 		<div class="container">
+			<div class="background">
 
-			<section>
-				<div id="AuthBody" style='display: none'>
-					<div id="loginForm">
-						<ul class="input-list style-1 clearfix">
-							<li>Username: <input type="text" id="usernameInputField" /><br /></li>
-							<li>Password:<input type="text" id="passwordInputField" /><br />
-							</li>
-							<li><br> <input type="button" value="Login"
-								id="loginButton" class="myButton"></li>
-						</ul>
+				<section>
+					<div id="AuthBody" style='display: none'>
+						<div id="loginForm">
+							<ul class="input-list style-1 clearfix">
+								<li> <label class="subtitle">Username: </label> <input type="text" id="usernameInputField" /><br /></li>
+								<li> <label class="subtitle">Password: </label> <input type="text" id="passwordInputField" /><br />
+								</li>
+								<li><br> <input type="button" value="Login"
+									id="loginButton" class="button"></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div id="AppBody">
-				<form>
-					<h2>Formulario Registro</h2>
-					<ul class="input-list style-1 clearfix">
-						<li><label>Nombre:</label> <input id="nombre" type="text"
-							placeholder="Nombre" required></li>
-						<li><label>Apellido:</label> <input id="apellido"
-							type="text" placeholder="Apellido"></li>
-						<li><label>Contraseña:</label> <input id="clave"
-							type="password"></li>
-						<li><label>Identifación:</label> <input id="cedula" type="text"
-							placeholder="Identificación" required></li>
-						<li><label>Direccion:</label> <input id="direccion"
-							type="text" placeholder="Direccion"></li>
-						<li><label>Fecha Nacimiento:</label> <input
-							id="fechaNacimiento" type="date" required></li>
-						<li><br> <input type="button" value="Nuevo CLiente"
-							id="nuevoCliente" class="myButton">
-						</li>
-					</ul>
-					<br>
-					</form>
-				</div>
-				<div id="ResponseDiv"></div>
-			</section>
-
+					<div id="AppBody">
+						<form>
+							<h2 class="title">Formulario Registro</h2>
+							<ul class="input-list style-1 clearfix">
+								<li><label class="subtitle">Nombre:</label> <input id="nombre" type="text"
+									placeholder="Nombre" required></li>
+								<li><label class="subtitle">Apellido:</label> <input id="apellido"
+									type="text" placeholder="Apellido"></li>
+								<li><label class="subtitle">Contraseña:</label> <input id="clave"
+									type="password"></li>
+								<li><label class="subtitle">Identifación:</label> <input id="cedula"
+									type="text" placeholder="Identificación" required></li>
+								<li><label class="subtitle">Direccion:</label> <input id="direccion"
+									type="text" placeholder="Direccion"></li>
+								<li><label class="subtitle">Fecha Nacimiento:</label> <input
+									id="fechaNacimiento" type="date" required></li>
+								<li><br> <input class="button" type="button" value="Nuevo Cliente"
+									id="nuevoCliente"></li>
+							</ul>
+							<br>
+						</form>
+					</div>
+				</section>
+			</div>
 		</div>
 	</div>
 

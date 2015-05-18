@@ -5,16 +5,12 @@
 section {
   margin-bottom: 60px;
   padding: 30px;
-  background-color: #efefef;
+  /*background-color: #efefef;*/
 }
 section:last-child {
   margin-bottom: 0;
 }
 
-/* headings */
-h2 {
-  margin-bottom: 30px;
-}
 
 /* form elements */
 label {
