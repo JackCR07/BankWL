@@ -66,14 +66,14 @@
    -webkit-background-origin: border !important; 
    -moz-background-origin: border !important; 
    background-origin: border-box !important; 
-   background: #FFFFFF; 
-   background: linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
-   background: -webkit-linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
-   background: -moz-linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
-   background: -o-linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
-   background: -ms-linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
-   background: linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
-   -svg-background: linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
+   background: #DB0700; 
+   background: linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
+   background: -webkit-linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
+   background: -moz-linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
+   background: -o-linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
+   background: -ms-linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
+   background: linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
+   -svg-background: linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
    -webkit-border-radius:4px; 
    -moz-border-radius:4px; 
    border-radius:4px; 
@@ -82,7 +82,8 @@
    box-shadow:0 0 2px 1px rgba(0, 0, 0, 0.2); 
    padding:0 20px; 
    margin:0 auto; 
-   height:31px;
+	
+   height:40px;
 } 
  
 span.button, 
@@ -104,7 +105,7 @@ button.button
    vertical-align: middle; 
    white-space: nowrap; 
    text-align: center; 
-   color: #000000; 
+   color: #FFFFFF; 
    margin: 0 !important; 
    overflow: visible; 
    cursor: pointer; 
@@ -155,14 +156,14 @@ button.button
  
 .button.hover, .button:hover 
 { 
-   background: #DB0700; 
-   background: linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
-   background: -webkit-linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
-   background: -moz-linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
-   background: -o-linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
-   background: -ms-linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
-   background: linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
-   -svg-background: linear-gradient(top, #FF0800 0, #B80600 100%) no-repeat; 
+   background: #FFFFFF; 
+   background: linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
+   background: -webkit-linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
+   background: -moz-linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
+   background: -o-linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
+   background: -ms-linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
+   background: linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
+   -svg-background: linear-gradient(top, #FFFFFF 0, #D1D1D1 100%) no-repeat; 
    -webkit-border-radius:4px; 
    -moz-border-radius:4px; 
    border-radius:4px; 
@@ -173,6 +174,6 @@ button.button
    margin:0 auto; 
 } 
 .button.hover, .button:hover { 
-   color: #FFFFFF !important; 
+   color: #000000; !important; 
 } 
 
