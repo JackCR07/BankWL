@@ -7,10 +7,7 @@ function nuevoCliente(){
 	var cliente = {
 			   "crearCliente": {
 				      "cliente": {
-				         "apellido": $("#apellido").val(),
 				         "cedula": $("#cedula").val(),
-				         "direccion": $("#direccion").val(),
-				         "fechaNacimiento": $("#fechaNacimiento").val(),
 				         "nombre": $("#nombre").val(),
 				         "password": $("#clave").val()
 				      }

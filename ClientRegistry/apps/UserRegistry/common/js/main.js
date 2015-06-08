@@ -113,10 +113,7 @@ function pushNotificationReceived(props, payload) {
 		WL.Client.logout("AuthRealm");
 	$('#ResponseDiv').html('');
 	$('#nombre').val('');
-	$('#apellido').val('');
 	$('#clave').val('');
-	$('#direccion').val('');
 	$('#cedula').val('');
-	$('#fechaNacimiento').val('');
 	//alert("payload :: " + JSON.stringify(payload));
 }

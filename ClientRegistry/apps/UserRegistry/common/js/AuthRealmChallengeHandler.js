@@ -69,7 +69,7 @@ function validationOK(response) {
 	//alert(response.invocationResult.Envelope.Body.operation1Response.resultado);
 	var resultado = response.invocationResult.Envelope.Body.operation1Response.resultado;
 	var username = $('#cedula').val();
-	if (resultado == 0) {
+	if (resultado == 1) {
 		var invocationData = {
 			adapter : "ValidationAdapter",
 			procedure : "submitAuthentication",
@@ -77,9 +77,14 @@ function validationOK(response) {
 		};
 		AuthRealmChallengeHandler.submitAdapterAuthentication(invocationData,
 				{});
-	} else {
-		$('#ResponseDiv').html('Cedula ya existe');
+	} else if(resultado==0){
+		$('#ResponseDiv').html('Cedula no existe');
 		$('#cedula').val('');
+	}
+	else{
+		$('#ResponseDiv').html('Usuario ya existe');
+		$('#nombre').val('');
+		
 	}
 
 }
