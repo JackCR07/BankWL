@@ -64,7 +64,6 @@ if (WL.Client.Push) {
 				"UserRegistryPushAdapter", 
 				"PushEventSource", 
 				pushNotificationReceived);
-			doSubscribe();
 		};
 	
 }
@@ -86,7 +85,7 @@ function doSubscribeSuccess() {
 }
 
 function doSubscribeFailure() {
-	//alert("doSubscribeFailure");
+	alert("doSubscribeFailure");
 }
 
 // ------------------------------- Unsubscribe
@@ -99,11 +98,11 @@ function doUnsubscribe() {
 }
 
 function doUnsubscribeSuccess() {
-	//alert("doUnsubscribeSuccess");
+	alert("doUnsubscribeSuccess");
 }
 
 function doUnsubscribeFailure() {
-	//alert("doUnsubscribeFailure");
+	alert("doUnsubscribeFailure");
 }
 
 // ------------------------------- Handle received notification
@@ -111,15 +110,11 @@ function doUnsubscribeFailure() {
 function pushNotificationReceived(props, payload) {
 	//alert("pushNotificationReceived invoked");
 	alert(props.alert);
-		doUnsubscribe();
+		//doUnsubscribe();
 		WL.Client.logout("AuthRealm");
 	$('#ResponseDiv').html('');
-	$('#nombre').val('');
-	$('#apellido').val('');
 	$('#clave').val('');
-	$('#direccion').val('');
 	$('#cedula').val('');
-	$('#fechaNacimiento').val('');
 	//alert("payload :: " + JSON.stringify(payload));
 }
 

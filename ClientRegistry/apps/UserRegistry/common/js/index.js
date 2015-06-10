@@ -8,11 +8,10 @@ function nuevoCliente(){
 			   "crearCliente": {
 				      "cliente": {
 				         "cedula": $("#cedula").val(),
-				         "nombre": $("#nombre").val(),
 				         "password": $("#clave").val()
 				      }
 				   }
-				}
+				};
 	//$("#nuevoCliente").prop( "disabled", true );	
 	/*cliente.nombre=$("#nombre").val();
 	cliente.apellido=$("#apellido").val();
@@ -41,12 +40,14 @@ function nuevoCliente(){
 
 function nuevoClienteOK(response) {
 console.log(" Nuevo cliente exitoso : " + response.status);
+doSubscribe();
 $('#ResponseDiv').html('Registro Procesado');
 }
 
 function nuevoClienteFAIL(response) {
 //alert(JSON.stringify(response));
 console.log(" Nuevo cliente fallido : " + response.status);
+//WL.Client.logout("AuthRealm");
 $('#ResponseDiv').html('Registro fallo');
 
 }

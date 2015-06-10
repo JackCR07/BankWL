@@ -5,10 +5,10 @@
  */
 var Cliente=function(){
 	this.nombre="";
-	this.direccion="";
+	//this.direccion="";
 	this.cedula="";
-	this.apellido="";
-	this.fechaNacimiento=new Date("dd/mm/yy");
+	//this.apellido="";
+	//this.fechaNacimiento=new Date("dd/mm/yy");
 	this.password="";
 };
 	

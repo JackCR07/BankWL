@@ -1,3 +1,7 @@
+/css/fireStyle.css
+/css/images/footer.png
+/css/images/page.png
+/css/images/redPage.png
 /css/main.css
 /css/style.css
 /filelist
@@ -10,7 +14,6 @@
 /js/initOptions.js
 /js/main.js
 /js/messages.js
-/js/PushAppRealmChallengeHandler.js
 /worklight/cordova.js
 /worklight/cordova_plugins.js
 /worklight/messages/de/messages.json

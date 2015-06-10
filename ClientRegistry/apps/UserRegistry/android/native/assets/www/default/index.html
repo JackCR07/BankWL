@@ -10,6 +10,7 @@
         <link href="worklight/worklight.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/fireStyle.css" rel="stylesheet">
         <script>
 		// Define WL namespace.
 		var WL = WL ? WL : {};
@@ -37,59 +38,51 @@
 	window.$ = window.jQuery = WLJQ;
 </script>
     </head>
-    <body style="display: none;">
+    <body class="background">
 	<!--application UI goes here-->
-        <div id="main">
+        <div class="background" id="main">
             <div class="container">
-                <section>
-                    <div id="AuthBody" style="display: none">
-                        <div id="loginForm">
-                            <ul class="input-list style-1 clearfix">
-                                <li>Username: <input id="usernameInputField" type="text">
-                                    <br>
-                                </li>
-                                <li>Password:<input id="passwordInputField" type="text">
-                                    <br>
-                                </li>
-                                <li>
-                                    <br> 
-                                    <input class="myButton" id="loginButton" type="button" value="Login">
-                                </li>
-                            </ul>
+                <div> 
+                    <section>
+                        <div id="AuthBody" style="display: none">
+                            <div id="loginForm">
+                                <ul class="input-list style-1 clearfix">
+                                    <li> 
+                                        <label class="subtitle">Username: </label> <input id="usernameInputField" type="text">
+                                        <br>
+                                    </li>
+                                    <li> 
+                                        <label class="subtitle">Password: </label> <input id="passwordInputField" type="text">
+                                        <br>
+                                    </li>
+                                    <li>
+                                        <br> 
+                                        <input class="button" id="loginButton" type="button" value="Login">
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div id="AppBody">
-                        <form>
-                            <h2>Formulario Registro</h2>
-                            <ul class="input-list style-1 clearfix">
-                                <li>
-                                    <label>Nombre:</label> <input id="nombre" placeholder="Nombre" required="" type="text">
-                                </li>
-                                <li>
-                                    <label>Apellido:</label> <input id="apellido" placeholder="Apellido" type="text">
-                                </li>
-                                <li>
-                                    <label>Contrase&ntilde;a:</label> <input id="clave" type="password">
-                                </li>
-                                <li>
-                                    <label>Identifaci&oacute;n:</label> <input id="cedula" placeholder="Identificaci&oacute;n" required="" type="text">
-                                </li>
-                                <li>
-                                    <label>Direccion:</label> <input id="direccion" placeholder="Direccion" type="text">
-                                </li>
-                                <li>
-                                    <label>Fecha Nacimiento:</label> <input id="fechaNacimiento" required="" type="date">
-                                </li>
-                                <li>
-                                    <br> 
-                                    <input class="myButton" id="nuevoCliente" type="button" value="Nuevo CLiente">
-                                </li>
-                            </ul>
-                            <br>
-                        </form>
-                    </div>
-                    <div id="ResponseDiv"></div>
-                </section>
+                        <div id="AppBody">
+                            <form>
+                                <h2 class="title">Formulario Registro De Usuario</h2>
+                                <ul class="input-list style-1 clearfix">
+                                    <li>
+                                        <label class="subtitle">Identificaci&oacute;n:</label> <input id="cedula" placeholder="Identificaci&oacute;n" required="" type="text">
+                                    </li>
+                                    <li>
+                                        <label class="subtitle">Contrase&ntilde;a:</label> <input id="clave" type="password">
+                                    </li>
+                                    <li>
+                                        <br> 
+                                        <input class="button" id="nuevoCliente" type="button" value="Nuevo Cliente">
+                                    </li>
+                                </ul>
+                                <br>
+                            </form>
+                        </div>
+                        <div id="ResponseDiv" style="color:white;"></div>
+                    </section>
+                </div>
             </div>
         </div>
         <script src="js/initOptions.js"></script>

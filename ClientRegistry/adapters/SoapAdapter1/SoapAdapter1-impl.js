@@ -41,14 +41,15 @@ function UsersDisponiblesHttpService_operation1(params, headers){
 		types: {
 			'tns:operation1': {
 				children: [
-					{'cedulaCliente': {  }}	
+					{'cedulaCliente': {  }},	
+					{'usuario': {  }}	
 				]
 			}
 		}
 	};
-    var namespaces = 'xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://UsersDisponibles" ';
+    var namespaces = 'xmlns:tns="http://UsersDisponibles" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" ';
     var request = buildBody(params, namespaces, mappings, soapEnvNS);
-    var soapAction = '';
+    var soapAction = 'http://UsersDisponibles/operation1';
     return invokeWebService(request, headers, soapAction);
 }
 

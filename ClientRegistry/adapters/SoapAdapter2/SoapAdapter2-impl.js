@@ -41,11 +41,7 @@ function WS_crearCliente(params, headers){
 		types: {
 			'impl1:Cliente': {
 				children: [
-					{'nombre': { nsPrefix: 'impl1' }},	
-					{'apellido': { nsPrefix: 'impl1' }},	
 					{'cedula': { nsPrefix: 'impl1' }},	
-					{'direccion': { nsPrefix: 'impl1' }},	
-					{'fechaNacimiento': { nsPrefix: 'impl1' }},	
 					{'password': { nsPrefix: 'impl1' }}	
 				]
 			},
@@ -57,7 +53,7 @@ function WS_crearCliente(params, headers){
 			}
 		}
 	};
-    var namespaces = 'xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://RFPRCSS/WS.tws" xmlns:impl1="http://BAPPT" xmlns:intf="http://RFPRCSS/WS.tws" ';
+    var namespaces = 'xmlns:impl="http://RFPRCSS/WS.tws" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:intf="http://RFPRCSS/WS.tws" xmlns:impl1="http://BAPPT" ';
     var request = buildBody(params, namespaces, mappings, soapEnvNS);
     var soapAction = 'http://RFPRCSS/WS.tws/crearCliente';
     return invokeWebService(request, headers, soapAction);
