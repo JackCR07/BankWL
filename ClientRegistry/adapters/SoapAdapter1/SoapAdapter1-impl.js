@@ -10,7 +10,7 @@
 //             the headers names and values. E.g. { 'name1' : 'value1', 'name2' : 'value2' }                     //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function UsersDisponiblesHttpService_operation1(params, headers){
+function WS_crearCliente(params, headers){
 	var soapEnvNS = '';
     // The value of 'soapEnvNS' was set based on the version of the SOAP to be used (i.e. 1.1 or 1.2).
     soapEnvNS = 'http://schemas.xmlsoap.org/soap/envelope/';
@@ -35,21 +35,27 @@ function UsersDisponiblesHttpService_operation1(params, headers){
     //   type definition within the 'types' object.
     var mappings = {
 		roots: {
-			'operation1': { nsPrefix: 'tns', type: 'tns:operation1' }				
+			'crearCliente': { nsPrefix: 'impl', type: 'impl:crearCliente' }				
 		},
 		
 		types: {
-			'tns:operation1': {
+			'impl1:Cliente': {
 				children: [
-					{'cedulaCliente': {  }},	
-					{'usuario': {  }}	
+					{'cedula': { nsPrefix: 'impl1' }},	
+					{'password': { nsPrefix: 'impl1' }}	
+				]
+			},
+
+			'impl:crearCliente': {
+				children: [
+					{'cliente': { nsPrefix: 'impl', type: 'impl1:Cliente' }}	
 				]
 			}
 		}
 	};
-    var namespaces = 'xmlns:tns="http://UsersDisponibles" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" ';
+    var namespaces = 'xmlns:impl="http://RFPRCSS/WS.tws" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:intf="http://RFPRCSS/WS.tws" xmlns:impl1="http://BAPPT" ';
     var request = buildBody(params, namespaces, mappings, soapEnvNS);
-    var soapAction = 'http://UsersDisponibles/operation1';
+    var soapAction = 'http://RFPRCSS/WS.tws/crearCliente';
     return invokeWebService(request, headers, soapAction);
 }
 
@@ -165,7 +171,7 @@ function invokeWebService(body, headers, soapAction){
     var input = {
         method : 'post',
         returnedContentType : 'xml',
-        path : '/UsersDisponibles/UsersDisponibles',
+        path : '/teamworks/webservices/RFPRCSS/WS.tws',
         body: {
             content : body.toString(),
             contentType : 'text/xml; charset=utf-8'

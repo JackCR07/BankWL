@@ -4,12 +4,12 @@
     <description></description>
     <connectivity>
         <connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
-            <protocol>http</protocol>
-            <domain>172.16.11.225</domain>
-            <port>7800</port>
+            <protocol>https</protocol>
+            <domain>WIN-3JVF8RJARSL</domain>
+            <port>9443</port>
         </connectionPolicy>
         <loadConstraints maxConcurrentConnectionsPerNode="2"/>
     </connectivity>
 
-    <procedure name="UsersDisponiblesHttpService_operation1"/>
+    <procedure name="WS_crearCliente"/>
 </wl:adapter>
